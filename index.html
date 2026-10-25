@@ -1,0 +1,141 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Test your knowledge of cybersecurity with an interactive quiz.">
+  <title>CyberShield | Cybersecurity Awareness Quiz</title>
+  <link rel="stylesheet" href="style.css">
+  <script src="script.js" defer></script>
+</head>
+<body>
+  <header class="navbar">
+    <a href="#" class="brand">
+      <span class="brand-icon">⌘</span>
+      CyberShield<span class="brand-dot">.</span>
+    </a>
+    <span class="nav-label">CYBERSECURITY AWARENESS</span>
+  </header>
+
+  <main class="container">
+    <section class="hero">
+      <div class="eyebrow"><span class="status-dot"></span> STAY SAFE ONLINE</div>
+      <h1>Think before you <span class="gradient-text">click.</span></h1>
+      <p class="subtitle">
+        Test your cybersecurity knowledge and learn how to protect
+        yourself from digital threats.
+      </p>
+    </section>
+
+    <section class="panel intro-panel" id="startScreen">
+      <div class="shield-art" aria-hidden="true">
+        <div class="shield">⬡</div>
+        <span class="orbit orbit-one"></span>
+        <span class="orbit orbit-two"></span>
+      </div>
+
+      <div class="intro-content">
+        <span class="section-tag">YOUR SECURITY CHECKUP</span>
+        <h2>Are you cyber smart?</h2>
+        <p>Answer 10 practical questions about passwords, phishing,
+          malware and safe browsing.</p>
+
+        <div class="feature-grid">
+          <div class="feature">
+            <span class="feature-icon">◷</span>
+            <div><strong>5 minutes</strong><small>Time limit</small></div>
+          </div>
+          <div class="feature">
+            <span class="feature-icon">◎</span>
+            <div><strong>10 questions</strong><small>Multiple choice</small></div>
+          </div>
+          <div class="feature">
+            <span class="feature-icon">✓</span>
+            <div><strong>Instant feedback</strong><small>Learn as you go</small></div>
+          </div>
+        </div>
+
+        <label class="input-label" for="playerName">Your name (optional)</label>
+        <input id="playerName" type="text" maxlength="40"
+          placeholder="Enter your name">
+
+        <button class="primary-btn full-btn" id="startBtn">
+          Start the quiz <span>→</span>
+        </button>
+        <p class="small-note">No account required. Just test your knowledge.</p>
+      </div>
+    </section>
+
+    <section class="panel quiz-panel hidden" id="quizScreen">
+      <div class="quiz-top">
+        <div>
+          <span class="section-tag">CYBER KNOWLEDGE TEST</span>
+          <h2 id="greeting">Let's get started</h2>
+        </div>
+        <div class="timer" id="timer" aria-live="polite">
+          <span>◷</span> <span id="timeText">05:00</span>
+        </div>
+      </div>
+
+      <div class="progress-info">
+        <span id="questionCounter">QUESTION 1 OF 10</span>
+        <span id="progressPercent">10%</span>
+      </div>
+      <div class="progress-track">
+        <div class="progress-fill" id="progressFill"></div>
+      </div>
+
+      <div class="question-area">
+        <span class="question-number" id="questionNumber">QUESTION 01</span>
+        <h3 id="questionText">Question goes here</h3>
+        <div class="options" id="optionsContainer"></div>
+        <div class="feedback hidden" id="feedback" aria-live="polite"></div>
+      </div>
+
+      <div class="quiz-bottom">
+        <span class="keyboard-hint">Choose the best answer</span>
+        <button class="primary-btn" id="nextBtn" disabled>
+          Next question <span>→</span>
+        </button>
+      </div>
+    </section>
+
+    <section class="panel result-panel hidden" id="resultScreen">
+      <div class="result-icon" id="resultIcon">✓</div>
+      <span class="section-tag">QUIZ COMPLETED</span>
+      <h2 id="resultTitle">Your results are in!</h2>
+      <p class="result-message" id="resultMessage"></p>
+
+      <div class="score-card">
+        <div class="score-main">
+          <span class="score-label">YOUR SCORE</span>
+          <div><span id="scoreValue">0</span><span class="score-total">/10</span></div>
+          <span id="scorePercent">0% accuracy</span>
+        </div>
+        <div class="score-stats">
+          <div><span class="stat-dot correct-dot"></span>
+            <span>Correct</span><strong id="correctCount">0</strong></div>
+          <div><span class="stat-dot wrong-dot"></span>
+            <span>Incorrect</span><strong id="wrongCount">0</strong></div>
+          <div><span class="stat-dot time-dot"></span>
+            <span>Time left</span><strong id="finalTime">00:00</strong></div>
+        </div>
+      </div>
+
+      <h3 class="review-heading">Answer review</h3>
+      <div id="reviewList" class="review-list"></div>
+
+      <button class="primary-btn full-btn" id="restartBtn">
+        Try again <span>↻</span>
+      </button>
+      <p class="small-note">Stay alert. Stay protected.</p>
+    </section>
+
+    <footer>
+      <span>© 2026 CyberShield Quiz</span>
+      <span>Learn • Detect • Protect</span>
+    </footer>
+  </main>
+</body>
+</html>
